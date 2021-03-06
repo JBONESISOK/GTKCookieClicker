@@ -91,146 +91,6 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid" id="shopgrid">
-                    <property name="width_request">350</property>
-                    <property name="height_request">275</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="row_homogeneous">True</property>
-                    <property name="column_homogeneous">True</property>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">0</property>
-                        <property name="top_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">2</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="x">115</property>
-                    <property name="y">327</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkLabel">
                     <property name="width_request">114</property>
                     <property name="height_request">80</property>
@@ -246,6 +106,57 @@
                   <packing>
                     <property name="x">231</property>
                     <property name="y">242</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="multiplierlabel">
+                    <property name="width_request">261</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Multiplier: 1</property>
+                    <attributes>
+                      <attribute name="foreground" value="#ffffffffffff"/>
+                      <attribute name="background" value="#000000000000"/>
+                      <attribute name="absolute-size" value="50000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">159</property>
+                    <property name="y">17</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="purchaseButton">
+                    <property name="label" translatable="yes">Purchase</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="clicked_shop_btn" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">204</property>
+                    <property name="y">447</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="costLabel">
+                    <property name="width_request">196</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Cost: 100</property>
+                    <attributes>
+                      <attribute name="foreground" value="#ffffffffffff"/>
+                      <attribute name="background" value="#000000000000"/>
+                      <attribute name="absolute-size" value="50000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">175</property>
+                    <property name="y">328</property>
                   </packing>
                 </child>
               </object>
