@@ -1,4 +1,6 @@
 #include <gtk/gtk.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct Player
 {
     int amount_clicked;
@@ -10,6 +12,8 @@ typedef struct
     GtkWidget *counterlabel;
     GtkWidget *clickButton;
     GtkWidget *moneyLabel;
+    GtkWidget *shopGrid;
+    GtkWidget *shopGridArr[6];
 } app_widgets;
 void clicked_btn(GtkButton *button, app_widgets *app_widgets)
 {
