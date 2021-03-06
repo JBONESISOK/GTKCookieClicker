@@ -1,5 +1,5 @@
 # change application name here (executable output name)
-TARGET=myapplication
+TARGET=cookieclicker
 
 # compiler
 CC=gcc

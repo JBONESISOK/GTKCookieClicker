@@ -1,6 +1,4 @@
 #include <gtk/gtk.h>
-#include <stdio.h>
-#include <stdlib.h>
 struct Player
 {
     int amount_clicked;
