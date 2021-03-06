@@ -1,18 +1,26 @@
 #include <gtk/gtk.h>
-
+struct Player
+{
+    int amount_clicked;
+    double money;
+    double multiplier;
+} player;
 typedef struct
 {
     GtkWidget *counterlabel;
-    int count;
+    GtkWidget *clickButton;
+    GtkWidget *moneyLabel;
 } app_widgets;
 void clicked_btn(GtkButton *button, app_widgets *app_widgets)
 {
-    app_widgets->count++;
-
     char text[20];
-    sprintf(text, "Clicked: %d", app_widgets->count);
+    sprintf(text, "Clicked: %d", ++player.amount_clicked);
+    player.money += 5 * player.multiplier;
     gtk_label_set_text(GTK_LABEL(app_widgets->counterlabel), text);
+    sprintf(text, "Money: %.2f", player.money);
+    gtk_label_set_text(GTK_LABEL(app_widgets->moneyLabel), text);
 }
+
 int main(int argc, char *argv[])
 {
     GtkBuilder *builder;
@@ -25,8 +33,13 @@ int main(int argc, char *argv[])
     window = GTK_WIDGET(gtk_builder_get_object(builder, "window_main"));
     gtk_window_set_title(GTK_WINDOW(window), "Cookie Clicker");
     widgets->counterlabel = GTK_WIDGET(gtk_builder_get_object(builder, "counterlabel"));
+    widgets->clickButton = GTK_WIDGET(gtk_builder_get_object(builder, "clickbtn"));
+    widgets->moneyLabel = GTK_WIDGET(gtk_builder_get_object(builder, "moneylabel"));
+    player.amount_clicked = 0;
+    player.money = 0.00;
+    player.multiplier = 1;
     gtk_label_set_text(GTK_LABEL(widgets->counterlabel), "Clicked: 0");
-    widgets->count = 0;
+
     gtk_builder_connect_signals(builder, widgets);
     g_object_unref(builder);
 
